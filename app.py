@@ -61,7 +61,7 @@ classes = ["apple", "banana", "grape", "mango", "strawberry"]
 # Load the model
 @st.cache_resource
 def load_model():
-    model = torch.load('fruit_model.pt', map_location='cpu')
+    model = torch.load('fruit_model.pt', map_location='cpu', weights_only=False)
     model.eval()
     return model
 
